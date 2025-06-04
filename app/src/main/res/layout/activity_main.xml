@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <!-- Поле ввода текста -->
+    <EditText
+        android:id="@+id/editTextInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Вводимый текст"
+        android:padding="12dp"
+        android:inputType="text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Кнопка "Копировать" -->
+    <Button
+        android:id="@+id/buttonCopy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Копировать"
+        app:layout_constraintTop_toBottomOf="@+id/editTextInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Нередактируемое поле -->
+    <TextView
+        android:id="@+id/textViewOutput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Скопированный текст"
+        android:background="@android:drawable/editbox_background"
+        android:padding="8dp"
+        android:textColor="#888888"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCopy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Кнопка "Закрыть" -->
+    <Button
+        android:id="@+id/buttonClose"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Закрыть"
+        app:layout_constraintTop_toBottomOf="@+id/textViewOutput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
